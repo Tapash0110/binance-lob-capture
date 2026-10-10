@@ -1,0 +1,26 @@
+# Ignore build artifacts
+build/
+bin/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
+
+# Output CSV files
+*.csv
+output/
+replay_output/
+test_output/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+
+# Environment & secrets (as required by security baseline)
+.env
+config/secrets.json
