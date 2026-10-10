@@ -2,6 +2,8 @@
 
 An ultra-low latency, production-grade C++17 system engineered for high-frequency trading (HFT) and quantitative research workflows. Connects directly to Binance public WebSocket streams (Spot and USD-M Futures), ingests normalized market data (`depth`, `depth5`, `trade`), maintains a deterministic local limit order book (LOB), and streams audit logs and order book snapshots to RFC 4180-compliant CSV files.
 
+> 📄 **System Architecture & Technical Whitepaper**: Read the full [Architecture & System Design Document](docs/ARCHITECTURE_AND_SYSTEM_DESIGN.md) or view the [System Architecture PDF](docs/Binance_LOB_System_Architecture.pdf).
+
 ---
 
 ## Table of Contents
