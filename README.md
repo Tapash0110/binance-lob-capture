@@ -19,6 +19,7 @@ An ultra-low latency, production-grade C++17 system engineered for high-frequenc
 10. [Sample Output Data](#sample-output-data)
 11. [Verification & Test Results](#verification--test-results)
 12. [Project Layout](#project-layout)
+13. [How to Submit on GitHub](#how-to-submit-on-github)
 
 ---
 
@@ -322,6 +323,10 @@ An automated verification script is provided in the repository:
 ├── .gitignore                  # Excludes build artifacts, CSV outputs, and secrets
 ├── build.sh                    # Automated build and test script
 ├── verify.sh                   # Comprehensive verification test runner
+├── docs/
+│   ├── ARCHITECTURE_AND_SYSTEM_DESIGN.md   # Comprehensive technical whitepaper
+│   ├── Binance_LOB_System_Architecture.pdf # System architecture PDF
+│   └── generate_pdf.py                     # ReportLab PDF compiler script
 ├── include/
 │   ├── app.hpp                 # Application orchestration & CLI configuration
 │   ├── csv_writer.hpp          # Asynchronous buffered RFC 4180 CSV writer
@@ -342,3 +347,40 @@ An automated verification script is provided in the repository:
     ├── CMakeLists.txt          # Test build target definition
     └── unit_tests.cpp          # 7 unit tests covering fixed-point, LOB, sequence & schemas
 ```
+
+---
+
+## How to Submit on GitHub
+
+### 1. Initialize and push your repository
+```bash
+# From your project root
+git init
+git add .
+git commit -m "Initial submission: Binance WebSocket capture + LOB"
+
+# Create a new repo on GitHub (via web UI or CLI), then:
+git remote add origin https://github.com/Tapash0110/binance-lob-capture.git
+git branch -M main
+git push -u origin main
+```
+
+### 2. Make sure .gitignore excludes build artifacts and secrets
+```gitignore
+# .gitignore
+build/
+*.csv
+*.o
+*.a
+*.so
+.env
+config/secrets.json
+```
+Never commit API keys, private keys, or credentials. All config should use environment variables or a `.env.example` template (no real values).
+
+### 3. Tag your submission
+```bash
+git tag -a v1.0.0 -m "Submission v1.0.0"
+git push origin v1.0.0
+```
+
